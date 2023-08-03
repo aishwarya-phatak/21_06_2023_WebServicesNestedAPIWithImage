@@ -1,0 +1,6 @@
+framework module Pods_21_06_2023_WebServicesNestedAPIWithImage {
+  umbrella header "Pods-21_06_2023_WebServicesNestedAPIWithImage-umbrella.h"
+
+  export *
+  module * { export * }
+}
