@@ -110,10 +110,15 @@ extension ViewController : UITableViewDataSource{
         let productImageString = products[indexPath.row].image
         
         //SDWebImage -- image downloading and caching
+//        productTableViewCell.productImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
 //        productTableViewCell.productImageView.sd_setImage(with: URL(string: productImageString))
-        
+//
+        productTableViewCell.productImageView.sd_setImage(with: URL(string: productImageString), placeholderImage: UIImage(named: "Spotify_logo"))
+      
         //Kingfisher -- image downloading and caching
-        productTableViewCell.productImageView.kf.setImage(with: URL(string: productImageString))
+//        productTableViewCell.productImageView.kf.setImage(with: URL(string: productImageString))
+        productTableViewCell.productImageView.kf.setImage(with: URL(string: productImageString), placeholder: UIImage(named: "Spotify_logo"))
+        productTableViewCell.productImageView.kf.indicatorType = IndicatorType.activity
         
         return productTableViewCell
     }
